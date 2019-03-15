@@ -1,5 +1,5 @@
 <!-- if you need html5 form validation add 'ngNativeValidate' to form element, by default this is disabled by angular -->
-<form #employeeForm="ngForm" (ngSubmit)="saveEmployee(employee)"> <!--employeeForm is a template reference variable-->
+<form #employeeForm="ngForm" (ngSubmit)="saveEmployee()"> <!--employeeForm is a template reference variable-->
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h3 class="panel-title">Create Employee</h3>
@@ -106,7 +106,8 @@
         <img [src]="employee.photoPath" height="200" width="200" *ngIf="previewPhoto"/>
       </div>
 
-      <div ngModelGroup="passwordGroup" 
+      <!--ngModelGroup can only be used as a child of ngForm directive-->
+      <!---div ngModelGroup="passwordGroup" 
         [class.has-error] = "confirmPassword.touched && confirmPassword.invalid  && !confirmPassword.errors?.required">
         
       <div class="form-group" [class.has-error]="password.touched && password.invalid">
@@ -130,7 +131,7 @@
         </span>
       </div>
 
-      </div>
+      </div-->
 
 
   </div>

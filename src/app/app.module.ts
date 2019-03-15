@@ -9,6 +9,8 @@ import { ListEmployeesComponent } from './employee/list-employees/list-employees
 import { CreateEmployeeComponent } from './employee/create-employee/create-employee.component';
 import { SelectRequiredValidatorDirective } from './shared/select-required-validator.directive';
 import { ConfirmEqualvalidatorDirective } from './shared/confirm-equal-validator.directive';
+import { EmployeeService } from './employee/employee.service';
+import { DisplayEmployeeComponent } from './employee/display-employee/display-employee.component';
 
 
 
@@ -18,7 +20,8 @@ import { ConfirmEqualvalidatorDirective } from './shared/confirm-equal-validator
     ListEmployeesComponent,
     CreateEmployeeComponent,
     SelectRequiredValidatorDirective,
-    ConfirmEqualvalidatorDirective
+    ConfirmEqualvalidatorDirective,
+    DisplayEmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import { ConfirmEqualvalidatorDirective } from './shared/confirm-equal-validator
     BsDatepickerModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
