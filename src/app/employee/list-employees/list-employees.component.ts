@@ -9,6 +9,7 @@ import { EmployeeService } from '../employee.service';
 export class ListEmployeesComponent implements OnInit {
 
   employees:Employee[];
+  selectedEmployee: Employee;
 
   constructor(private _employeeService: EmployeeService) {
   }
@@ -18,4 +19,7 @@ export class ListEmployeesComponent implements OnInit {
     this.employees = this._employeeService.getEmployees();
   }
 
+  handleNotify(eventData: Employee) {
+    this.selectedEmployee = eventData;
+  }
 }
