@@ -1,5 +1,5 @@
-<h1>
-  {{ selectedEmployee.id}}
+<h1 *ngIf="selectedEmployee">
+  {{ selectedEmployee?.name + ':' + selectedEmployee?.id}}
 </h1>
 <div class="panel panel-primary" *ngFor="let employee of employees">
   <app-display-employee [employee]="employee" (notify)="handleNotify($event)"></app-display-employee>
