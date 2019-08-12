@@ -11,9 +11,10 @@ import { SelectRequiredValidatorDirective } from './shared/select-required-valid
 import { ConfirmEqualvalidatorDirective } from './shared/confirm-equal-validator.directive';
 import { EmployeeService } from './employee/employee.service';
 import { DisplayEmployeeComponent } from './employee/display-employee/display-employee.component';
+import { CreateEmployeeCanDeactivateGuardService } from './employee/create-employee/create-employee-can-deactivate-guard.service';
 
 
-
+//register Components, Services, RouteListerners etc here
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,7 @@ import { DisplayEmployeeComponent } from './employee/display-employee/display-em
     BsDatepickerModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService, CreateEmployeeCanDeactivateGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
