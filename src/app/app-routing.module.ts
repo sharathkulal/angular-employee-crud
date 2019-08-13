@@ -12,7 +12,7 @@ const routes: Routes = [
     component: CreateEmployeeComponent,
     canDeactivate: [CreateEmployeeCanDeactivateGuardService] 
   },
-  { path: 'employees/:id', component: EmployeeDetailsComponent },
+  { path: 'employees/:id', component: EmployeeDetailsComponent },//id is a required route parameter
   { path: '', redirectTo: '/list', pathMatch:'full'}
 ];
 
