@@ -17,7 +17,7 @@ export class EmployeeDetailsComponent implements OnInit {
   //Life cycle hooks
   //+ is used to convert string to number
   ngOnInit() {
-    const id = +this._route.snapshot.params['id'];
+    const id = +this._route.snapshot.paramMap.get('id');
     this.employee =  this._employeeService.getEmployee(id);
   }
 
