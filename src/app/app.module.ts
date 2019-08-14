@@ -13,6 +13,7 @@ import { EmployeeService } from './employee/employee.service';
 import { DisplayEmployeeComponent } from './employee/display-employee/display-employee.component';
 import { CreateEmployeeCanDeactivateGuardService } from './employee/create-employee/create-employee-can-deactivate-guard.service';
 import { EmployeeDetailsComponent } from './employee/employee-details/employee-details.component';
+import { EmployeeFilterPipe } from './employee/list-employees/employee-filter.pipe';
 
 
 //register Components, Services, RouteListerners etc here
@@ -24,7 +25,8 @@ import { EmployeeDetailsComponent } from './employee/employee-details/employee-d
     SelectRequiredValidatorDirective,
     ConfirmEqualvalidatorDirective,
     DisplayEmployeeComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    EmployeeFilterPipe
   ],
   imports: [
     BrowserModule,
