@@ -54,7 +54,8 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   saveEmployee(): void {
-    this._employeeService.save(this.employee);
+    const newEmployee = Object.assign({}, this.employee);
+    this._employeeService.save(newEmployee);
     this.createEmployeeForm.reset();//resets form flags like pristine, dirty etc. also clears out form fields.
     this._router.navigate(['list']);
     console.log(this.employee)
