@@ -2,7 +2,7 @@
   <input type="text" class="form-control" placeholder="Search By name" style="width:300px" [(ngModel)]="searchTerm"/>
 </div>
 <!-- Pass the Employee Objects through custom filter pipe employeeFilter(which takes searchTerm as input)-->
-<div class="panel panel-primary" *ngFor="let employee of employees | employeeFilter:searchTerm">
+<div class="panel panel-primary" *ngFor="let employee of filteredEmployees">
   <div (click)="onClick(employee.id)" class="pointerCursor">
     <app-display-employee [employee]="employee" #childComponent></app-display-employee>
   </div>
